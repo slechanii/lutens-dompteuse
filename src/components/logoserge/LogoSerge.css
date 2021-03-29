@@ -1,0 +1,14 @@
+.logo-serge {
+  margin-top: 45px;
+  margin-left: 45px;
+  width: 200px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logo-serge {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 120px;
+  }
+}

@@ -1,0 +1,206 @@
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  opacity: 1;
+}
+.carousel-indicators li.active {
+  background-color: #8F2011;
+}
+
+.modal-carousel {
+  --background-image-default: url('../../assets/img/background.jpg');
+  --background-image-slide3: url('../../assets/img/Background_Slideshow_1.jpg');
+  background-image: var(--background-image, var(--background-image-default));
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-carousel .close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 100;
+}
+.modal-carousel .close-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-carousel .carousel, .modal-carousel .carousel-inner {
+  height: 100%;
+}
+.modal-carousel .custom-videojs {
+  height: 100%;
+}
+.modal-carousel .carousel-inner {
+  padding: 0;
+  z-index: 5;
+}
+.modal-carousel .carousel-control-prev, .modal-carousel .carousel-control-next {
+  height: 10%;
+  width: 5%;
+  top: 45%;
+  z-index: 6;
+}
+.modal-carousel .carousel-item {
+  height: 100%;
+  text-align: center;
+}
+.modal-carousel .section-2, .modal-carousel .section-3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 15%;
+}
+.modal-carousel .section-3 {
+  padding: 40px 10%;
+}
+.modal-carousel .section-2-content {
+  align-self: center;
+}
+.modal-carousel .section-2 h2 {
+  font-size: 46px;
+  text-align: left;
+}
+.modal-carousel .section-2 h2.citation::before, .modal-carousel .section-2 h2.citation::after {
+  background-image: url('./Guillemet2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  content:"";
+}
+.modal-carousel .section-2 h2.citation::before {
+  margin-left: -40px;
+}
+
+.modal-carousel .section-2 h2.serge {
+  text-align: right;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.modal-carousel .section-2 hr {
+  border-color: white;
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.modal-carousel .section-2 small {
+  font-size: 22px;
+}
+
+.modal-carousel .section-3-content {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.modal-carousel .section-3-content img {
+  margin-right: 60px;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  object-fit: contain;
+}
+.modal-carousel .section-3-content div {
+  flex: 2;
+}
+.modal-carousel .section-3 h3 {
+  font-size: 90px;
+  font-weight: 700;
+}
+.modal-carousel .section-3 p {
+  font-size: 30px;
+}
+.modal-carousel .video-js {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.video-js.vjs-ended video {
+  opacity: 0.4;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .modal-carousel {
+    --background-image-default-mobile: url('../../assets/img/Background_Slideshow_Mobile.png');
+    --background-image-default: var(--background-image-default-mobile);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .modal-carousel .carousel-control-prev, .modal-carousel .carousel-control-next {
+    top: initial;
+    margin: 0px 10px;
+    bottom: 0px;
+  }
+
+  .modal-carousel .close-btn img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .modal-carousel .section-2, .modal-carousel .section-3 {
+    padding: 40px 30px;
+  }
+
+  .modal-carousel .section-2-content {
+    align-self: center;
+    /*margin-top: 20px;*/
+    overflow-y: scroll;
+  }
+  .modal-carousel .section-2 h2 {
+    font-size: 26px;
+  }
+  .modal-carousel .section-2 h2.citation {
+    padding-left: 20px;
+  }
+  .modal-carousel .section-2 h2.citation::before, .modal-carousel .section-2 h2.citation::after {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-carousel .section-2 h2.citation::before {
+    margin-left: -20px;
+  }
+  .modal-carousel .section-2 h2.serge {
+    margin-top: 20px;
+  }
+  .modal-carousel .section-2 small {
+    font-size: 16px;
+  }
+  .modal-carousel .section-3-content {
+    margin-left: initial;
+    flex-direction: row;
+    align-self: flex-start;
+  }
+  
+  .modal-carousel .section-3-content img {
+    display: none;
+  }
+  .modal-carousel .section-3 h3 {
+    font-size: 46px;
+  }
+  .modal-carousel .section-3 p {
+    font-size: 22px;
+    text-align: left;
+    padding-right: 40px;
+  }
+
+  .modal-carousel .section-3 .description p:nth-child(2n) {
+    text-align: right;
+    padding-right: 0px;
+    padding-left: 40px;
+  }
+
+  .section-3-content > div > .description > p:first-of-type {
+
+    padding-right: 35px !important;  
+  }
+}

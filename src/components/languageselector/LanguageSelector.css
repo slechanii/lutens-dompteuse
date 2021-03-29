@@ -1,0 +1,25 @@
+.language-selector {
+  display: inline-block;
+}
+
+.language-selector label {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.language-selector img {
+  width: 30px;
+  cursor: pointer;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .language-selector img {
+    width: 25px;
+  }
+  .language-selector label {
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
+}

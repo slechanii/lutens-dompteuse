@@ -1,0 +1,90 @@
+.modal-checklist {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.modal-checklist .close-btn {
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.modal-checklist .close-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-checklist .offset-1 {
+  margin-left: 20px;
+}
+
+.notes {
+  background-image: -webkit-linear-gradient(black, black 30px,white 30px,white 31px, black 31px);
+  background-image: -moz-linear-gradient(black, black 30px,white 30px,white 31px, black 31px);
+  background-image: -ms-linear-gradient(black, black 30px,white 30px,white 31px, black 31px);
+  background-image: -o-linear-gradient(black, black 30px,white 30px,white 31px, black 31px);
+  background-image: linear-gradient(black, black 30px,white 30px,white 31px, black 31px);
+  background-size: 100% 31px;
+  border: none;
+  border-radius: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 31px;
+  font-family: Arial, Helvetica, Sans-serif;
+  padding: 8px;
+  color: white;
+}
+
+.modal-checklist input[type=radio] {
+  border: 1px solid #fff;
+  padding: 0.5em;
+  -webkit-appearance: none;
+}
+
+.modal-checklist input[type=radio]:checked {
+  background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+  background-size: 9px 9px;
+}
+
+.modal-checklist input[type=radio]:focus {
+  outline-color: transparent;
+}
+
+.modal-checklist h2 {
+  margin-top: -20px;
+}
+
+.modal-checklist .form-footer {
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+
+.modal-checklist .form-footer button {
+  text-transform: uppercase;
+}
+
+.modal-checklist label.form-label {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.modal-checklist textarea {
+  padding-top:0;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  outline: 0 !important;
+  border: 0 !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .modal-checklist h2 {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .modal-checklist .form-check-label {
+    margin-right: 40px;
+  }
+}

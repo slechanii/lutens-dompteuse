@@ -1,0 +1,25 @@
+.arrow-back {
+  width: 40px;
+  cursor: pointer;
+  margin: 0px 50px;
+}
+
+.arrow-back.arrow-right {
+  transform: rotate(180deg);
+}
+
+.arrow-back.arrow-top {
+  width:5%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .arrow-back {
+    width: 25px;
+    margin: 0px 25px;
+  }
+  .arrow-back.arrow-top {
+    width:15%;
+  }
+  
+}

@@ -1,0 +1,362 @@
+.bar-navigation-container {
+  background-image: url('./Background_Fioles.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul.bar-navigation {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  justify-content: center;
+  padding-top: 40px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bar-navigation-container {
+    background-image: url('./Background_Fioles@2x.png');
+  }
+}
+
+ul.bar-navigation li {
+  width: 120px;
+  display: flex;
+  align-items: stretch;
+  padding: 65px 40px;
+  cursor: pointer;
+  /* transition: all .5s ease; */
+  cursor: url('../../assets/img/Cursor_Default.png'), auto;
+}
+
+.active {
+    cursor: url('../../assets/img/Cursor_Default.png'), auto !important;
+    /*margin: 0 16px;*/
+}
+
+ul.bar-navigation li .section-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+ul.bar-navigation li .section-title img {
+  margin: 0;
+  white-space: nowrap;
+  width: auto;
+  height: 70%;
+}
+
+ul.bar-navigation li .section-content {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: all .25s .1s ease-out; */
+  width: 0;
+}
+ul.bar-navigation li .section-content h2, ul.bar-navigation li .section-content p {
+  display:  block;
+  opacity: 0;
+  /* transition: all .25s .1s ease-out; */
+}
+
+ul.bar-navigation li.active {
+  flex: 5;
+  cursor: default;
+}
+
+ul.bar-navigation li.active .section-content {
+  flex: 4;
+  opacity: 1;
+  visibility: visible;
+  transform: scaleX(1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: baseline;
+}
+ul.bar-navigation li.active .section-content h2 {
+  font-size: 40px;
+  font-weight: 900;
+  display: inline;
+  opacity: 1;
+}
+ul.bar-navigation li.active .section-content p {
+  font-weight: 700;
+  font-size: 22px;
+  display: inline;
+  opacity: 1;
+  max-width: 310px;
+}
+
+ul.bar-navigation li.active .section-content button {
+  font-size: 22px;
+  padding: 5px 20px;
+}
+
+.bar-navigation-container .bar-navigation-action {
+  width: 100%;
+  margin-top: -100px;
+  text-align: right;
+  padding-bottom: 40px;
+}
+
+.bar-navigation-container .bar-navigation-action .btn {
+  padding: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0px 20px;
+  flex: 1;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.bar-navigation-container .bar-navigation-action .arrow-down{
+  position: absolute;
+  left:calc(50% - 9px);
+  bottom: 30px;
+}
+
+
+/* CODE SOFIAN ANIM */
+
+.bar-navigation > li {
+    margin-left: 40px;
+    margin-right: 40px; 
+}
+
+
+.vial{
+    position: absolute;
+    height: 55%  !important;
+}
+
+
+.vial-full {
+    opacity: 0;
+    z-index: 2;
+    height: 56.5% !important;
+}
+
+.vial > img{
+    /* width: 300px !important;
+    height: 200px !important; */
+}
+
+.vial-silhouette{
+    z-index: 1;
+}
+
+
+.vial-empty{
+    /* transform: rotate3d(2,0,2, -45deg); */
+    /* transform: rotate(145deg);  */
+    z-index: 2;   
+}
+
+.vial-empty-1{
+    /* transform: rotate3d(1, 1, 140, 140deg); */
+    transform: rotate(140deg);
+    /* transform: rotateY(140deg); */
+    /* transform: rotate(140deg); */
+    opacity: 0.7;
+    z-index: 3;
+}
+
+.vial-empty-2{
+    transform: rotate(220deg);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.vial-empty-3{
+    transform: rotate(120deg);
+    z-index: 3;
+    opacity: 0.7;
+}
+
+.vial-empty-4{
+    transform: rotate(165deg);
+    z-index: 4;
+    opacity: 0.7;
+}
+
+.vial-empty-5{
+    transform: rotate(30deg);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.vial-empty-6{
+    transform: rotate(190deg);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.vial-empty-7{
+    transform: rotate(305deg);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.vial-empty-8{
+    /* transform: rotate3d(6, 5, 6, 50deg); */
+    transform: rotate(20deg);
+    z-index: 2;
+    opacity: 0.7;
+    /* transform: scale(1.25);   */
+}
+
+.vial-empty-anim{
+    animation: anim-empty-vial 3s forwards;
+} 
+
+.vial-empty-anim-counter-clockwise{
+    animation: anim-empty-vial-counter-clockwise 3s forwards;
+} 
+
+.fade-out{
+    animation: anim-fade-out 3s forwards;
+    transform: rotate3d(0,0,0, 45deg);
+}
+
+.fade-in{
+    animation: anim-fade-in 3s forwards;
+}
+
+.thinner-vials-container > li{
+    animation: anim-thinner-container 2s forwards;
+}
+
+
+/* AJUSTER MAX WIDTH pour active globale */
+li.active{
+    /* display: inline-flex !important; */
+    max-width: 25% !important;
+    padding: 0 !important;
+}
+
+/* ajuster width pour text area spec */
+li.active > .section-content{
+    max-width: 400px !important;
+    /* background: red  !important; */
+    /* transform: scaleX(0.7) !important; */
+} 
+
+.smoke-opacity{
+    position: absolute;
+    opacity: 0;
+    /* margin-bottom: 15% !important;     */
+}
+
+
+  .smoke-in{
+    animation: anim-smoke-in 1.5s forwards;
+}
+
+
+@keyframes anim-smoke-out {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        opacity: 0;
+    }
+    /* transition: all .25s .1s ease-out; */
+  }
+
+  @keyframes anim-smoke-in {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+
+
+@keyframes anim-fade-out {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+@keyframes anim-fade-in {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+@keyframes anim-empty-vial {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        /* transform: rotate3d(-0,-0,-0, 45deg); */
+        transform: rotate(0deg);
+    }
+  }
+
+  @keyframes anim-empty-vial-counter-clockwise {
+    0% {
+        /* transform: rotate(0deg) rotate(0deg) rotate(90deg); */
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        /* transform: rotate3d(-0,-0,-0, 45deg); */
+        /* transform: rotate(-360deg); */
+        transform: rotate(0deg) rotate(360deg);
+    }
+  }
+
+  @keyframes anim-thinner-container{
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+  }
+
+
+
+
+/* CODE SOFIAN ANIM */

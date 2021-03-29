@@ -1,0 +1,25 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - '# Execute Amplify CLI with the helper script'
+        # - amplifyPush --simple
+        # change script : https://github.com/aws-amplify/amplify-cli/issues/5832#issuecomment-760344453
+        - amplify init --amplify "{\"envName\":\"dev\"}" --yes
+        - amplify push --yes
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn install --frozen-lockfile
+    build:
+      commands:
+        - yarn run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

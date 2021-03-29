@@ -1,0 +1,86 @@
+.bar-navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 25px;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-image: url('./Background_Fioles.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;*/
+  padding-left: 15%;
+  padding-right: 17%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bar-navigation-container{
+    background-image: url('./Background_Fioles@2x.png');
+  }
+}
+.bar-navigation .item {
+  text-align: center;
+  justify-self: center;
+  width: 40px;
+  align-self: flex-start;
+}
+.bar-navigation .item:nth-child(-n+4) {
+  align-self: flex-end;
+}
+.bar-navigation .item img {
+  height: 245px;
+  width: auto;
+}
+/*
+.bar-navigation .bar-navigation-action {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+.bar-navigation .bar-navigation-action .homepage {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  border: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.bar-navigation .bar-navigation-action .arrow-down{
+  position: absolute;
+  left:calc(50% - 9px);
+  bottom: 10px;
+}
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+/*
+  .bar-navigation .bar-navigation-action .homepage {
+    right: 60px;
+    bottom: 10px;
+    font-size: 20px;
+  }
+
+  .bar-navigation .bar-navigation-action .arrow-down{
+    left:calc(50% - 70px);
+    bottom: -5px;
+  }*/
+
+  .bar-navigation-container .bar-navigation-action {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+
+  .bar-navigation-container .bar-navigation-action .arrow-down{
+    left:calc(50% - 9px);
+    /* bottom: -30px; */
+  }
+  
+.bar-navigation-action{
+    margin-top: 0 !important;
+}
+
+}

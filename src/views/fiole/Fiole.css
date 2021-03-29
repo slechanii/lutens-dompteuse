@@ -1,0 +1,199 @@
+.fiole {
+  background-image: url('../main/Background_Lab.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  top: 0;
+  /*height: calc(6381 / var(--base-width) * 100vw);*/
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .fiole{
+    background-image: url('../main/Background_Lab@2x.png');
+  }
+}
+
+@keyframes up-and-down {
+  0% {transform: translateY(-10px)}
+  100% {transform: translateY(10px)}
+}
+
+.fiole .mainContent {
+  /*position: absolute;*/
+  /*top: 200px;*/
+  margin-top: 200px;
+  width: 100%;
+}
+
+.fiole .mainContent .flacon {
+  width: calc(100% - 200px);
+  margin-left: 110px;
+  margin-right: 110px;
+  background-color: rgba(0, 0, 0, 1.0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 258px;
+  padding-bottom: 0px;
+}
+
+.fiole .mainContent .flacon-scroll {
+  width: calc(100% - 200px);
+  margin-left: 110px;
+  margin-right: 110px;
+  background-color: rgba(0, 0, 0, 1.0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  padding-bottom: 50px;
+}
+
+.fiole .mainContent img.img-fiole {
+  width: 1184px;
+  height: 2851px;
+  align-self: center;
+}
+
+.fiole .mainContent p {
+  font-size: 38px;
+  max-width: 1000px;
+}
+
+.fiole .mainContent .arrow-down {
+  width: 32px;
+  height: 32x;
+  animation: up-and-down 0.5s infinite alternate ;
+  pointer-events: none;
+}
+
+.fiole .video-js, .fiole .fiole-content {
+  position: absolute;
+}
+.fiole .fiole-content {
+  width: 100%;
+  height: 100vh;
+}
+
+.fiole .dots span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+
+.fiole .fiole-content .bar-navigation {
+  top: 126.27px;
+}
+
+.fiole .download-assets {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.fiole .download-assets .btn {
+  padding: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0px 20px;
+  flex: 1;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.fiole .download-assets .btn:hover {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+/*.fiole .download-assets :last-child {
+  margin-left: 3rem;
+}*/
+
+.fiole .fiole-content .checklist-action {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0px;
+  background: url(../../assets/img/background-tile.png) repeat top left;
+}
+
+.fiole .fiole-content .checklist-action .homepage {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  border: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+/*
+.fiole .fiole-content .checklist-action>.btn {
+  padding: 17px;
+  font-size: 25px;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0.4);
+  color: #f8f9fa;
+}
+
+.fiole .fiole-content .checklist-action>.btn:hover {
+  background: #f8f9fa;
+  color: #212529;
+}*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .fiole {
+    background-position-y: 90px;
+  }
+
+  .fiole .fiole-content {
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    display: none;
+  }
+
+  .fiole .mainContent .flacon {
+    padding: 40px 0;
+    margin: 0 auto;
+    width: calc(100% - 10px);
+  }
+
+  .fiole .mainContent .flacon-scroll {
+    padding: 40px 0;
+    margin: 0 auto;
+    width: calc(100% - 10px);
+  }
+
+  .fiole .mainContent p {
+    font-size: 20px;
+    padding: 0px 40px;
+  }
+
+  .fiole .mainContent img.img-fiole {
+    width: 100%;
+    height: auto;
+  }
+
+  .fiole .download-assets {
+    display: flex;
+    flex-direction: column;
+  }
+  .fiole .download-assets .btn {
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px 20px;
+  }
+
+  .fiole .fiole-content .checklist-action>.btn {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 17px;
+  }
+
+}

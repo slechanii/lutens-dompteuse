@@ -1,0 +1,71 @@
+
+.liberte {
+  position: relative;
+  --background-image-fr: url('./Background_Lab_3.jpg');
+  --background-image-en: url('./Background_Lab_3_EN.jpg');
+  --background-image-es: url('./Background_Lab_3_ES.jpg');
+  background-image: var(--background-image, var(--background-image-fr));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: calc(100vw * 9 / 16);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.liberte .section-arrow-left, .liberte .section-arrow-right {
+  width: 150px;
+}
+
+.liberte .section-arrow-right {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.liberte .clickable-zone {
+  width: calc(1500 / var(--base-width) * 100%);
+  height: 100%;
+  cursor: pointer;
+}
+
+.liberte>.arrow-back {
+  position: absolute;
+  bottom: 5%;
+  left: 62%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .liberte {
+    --background-image-fr: url('./Background_Lab_3_Mobile.jpg');
+    --background-image-en: url('./Background_Lab_3_Mobile_EN.jpg');
+    --background-image-es: url('./Background_Lab_3_Mobile_ES.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .liberte .section-arrow-left, .liberte .section-arrow-right {
+    width: 50px;
+  }
+
+  .liberte>.arrow-back {
+    left: 55%;
+    bottom: 17%;
+  }
+
+  .section-arrow-left{
+    transform: translate(0%, 80%) !important;
+    /* margin-top:  !important;  */
+}
+.section-arrow-right{
+    transform: translate(0%, 80%) !important;
+    /* transform: rotate(180deg) !important; */
+    /* margin-top:  !important;  */
+}
+}

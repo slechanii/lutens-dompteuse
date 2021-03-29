@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Euder";
+  src: local("Euder"),
+    url("./assets/fonts/euder/Euder-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Euder";
+  font-weight: 700;
+  src: local("Euder"),
+    url("./assets/fonts/euder/Euder-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Euder";
+  font-weight: 900;
+  src: local("Euder"),
+    url("./assets/fonts/euder/Euder-Black.otf") format("opentype");
+}
+
+
+:root{
+  --main-bg-color: black;
+  --main-max-width: 1920px;
+  --main-max-height: 1080px;
+  --main-text-color: white;
+  --main-red-color: #A32E13;
+  --main-grey-color: #707070;
+  --digitinput-background-color: #272727;
+  --digitinput-border-color: #471001;
+  --base-width: 1920;
+  --base-height: 1080;
+}
+
+body {
+  font-family: Euder, 'Helvetica Neue', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  cursor: url('./assets/img/Cursor_Default.png'), auto;
+}
+body.checklist-modal {
+  cursor: initial !important;
+}
+
+.close-btn
+{
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+
+
+.close-btn > img
+{
+    margin-top: 20px !important;
+    float: right !important;
+}
+
+a, input, button, .clickable, .clickable-zone, textarea  {
+  cursor: url('./assets/img/Cursor_clicable.png'), auto !important;
+}
+
+.bar-navigation ul.bar-navigation li.active, label{
+  cursor: url('./assets/img/Cursor_Default.png'), auto !important;
+}
+body.checklist-modal .bar-navigation ul.bar-navigation li.active, body.checklist-modal label,
+body.checklist-modal a, body.checklist-modal input, body.checklist-modal button, body.checklist-modal .clickable,
+body.checklist-modal .clickable-zone, body.checklist-modal textarea {
+  cursor: initial !important;
+}
+
+p, small, h1, h2, h3, h4, h5, button {
+  white-space: pre-line;
+}
+
+body.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+#root {
+  white-space: pre-line;
+  width: 100%;
+  height: 100%;
+  max-width: var(--main-max-width);
+  overflow-x: hidden;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('./assets/img/background-tile.png') repeat top left;
+}
+/*
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #root{
+    background: url('./assets/img/background@2x.png') repeat-y top left;
+  }
+}
+*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #root {
+    /*background-size: 100vh;*/
+  }
+}
+
+.btn-unlock {
+  cursor: pointer;
+  width: 100%;
+}

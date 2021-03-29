@@ -1,0 +1,63 @@
+
+.delivrance {
+  position: relative;
+  --background-image-fr: url('./Background_Lab_2.jpg');
+  --background-image-en: url('./Background_Lab_2_EN.jpg');
+  --background-image-es: url('./Background_Lab_2_ES.jpg');
+  background-image: var(--background-image, var(--background-image-fr));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: calc(100vw * 9 / 16);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.delivrance .section-arrow-left, .delivrance .section-arrow-right {
+  width: 150px;
+}
+
+.delivrance .section-arrow-right {
+  text-align: right;
+  margin-right: 20px;
+}
+
+
+.delivrance .clickable-zone {
+  width: calc(1500 / var(--base-width) * 100%);
+  height: 100%;
+  cursor: pointer;
+}
+
+.delivrance>.arrow-back {
+  position: absolute;
+  bottom: 8%;
+  left:51%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+  .delivrance {
+    --background-image-fr: url('./Background_Lab_2_Mobile.jpg');
+    --background-image-en: url('./Background_Lab_2_Mobile_EN.jpg');
+    --background-image-es: url('./Background_Lab_2_Mobile_ES.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .delivrance .section-arrow-left, .delivrance .section-arrow-right {
+    width: 50px;
+  }
+
+  .delivrance>.arrow-back {
+    left: 45%;
+    bottom: 20%;
+  }
+}

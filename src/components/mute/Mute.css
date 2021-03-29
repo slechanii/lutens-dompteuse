@@ -1,0 +1,79 @@
+.mute-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.mute {
+  width: 50px;
+}
+
+.mute-container.is-animated {
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mute-container.is-animated .mute{
+  width: 75px;
+  margin-bottom: 10px;
+}
+
+.mute-text {
+  max-width: 250px;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.mute-container.is-animated .mute-text{
+  text-align: center;
+  max-width: 300px;
+  font-size: 15px;
+}
+
+.mute-text span {
+  padding-right: 5px;
+}
+
+.mute-container.is-animated .mute-text span{
+  display: block;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .mute {
+    width: 35px;
+  }
+
+  .mute-container.is-animated {
+    width: 100%;
+  }
+
+  .mute-container.is-animated .mute-text span{
+    display: block;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .mute-container.is-animated .mute-text{
+    display: block;
+    font-size: 12px;
+  }
+
+  .mute-text {
+    top: 18px;
+    left: 60px;
+    line-height: 15px;
+  }
+}

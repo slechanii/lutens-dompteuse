@@ -1,0 +1,181 @@
+.main {
+  background-image: url('./Background_Lab.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  top: 0;
+  padding-top: calc(6381 / var(--base-width) * 100%); /* (img-height / img-width * container-width) */
+  opacity: 0; 
+}
+/*
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .main{
+    background-image: url('./Background_Lab@2x.png');
+  }
+}
+*/
+.main .section1, .main .section2,
+.main .section3, .main .section4,
+.main .arrow-down, .main .download-assets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: var(--padding-top);
+  padding-left: var(--padding-left);
+  width: var(--width);
+}
+
+@keyframes up-and-down {
+  0% {transform: translateY(-10px)}
+  100% {transform: translateY(10px)}
+}
+
+.main .arrow-down {
+  position: fixed;
+  --padding-left: 48vw;
+  --padding-top: 90vh;
+  --width: calc(40 / var(--base-width) * 100% + var(--padding-left));
+  animation: up-and-down 0.5s infinite alternate ;
+  z-index: 9;
+  pointer-events: none;
+}
+.main .section1 {
+  --padding-left: calc(64 / var(--base-height) * 100%);
+  --padding-top: calc(235 / var(--base-width) * 100%);
+  --width: calc(700 / var(--base-width) * 100% + var(--padding-left));
+}
+.main .section1 p {
+  text-align: center;
+  font-family: 'Euder';
+  font-size: 24px;
+}
+
+.main .section2 {
+  --padding-left: calc(210 / var(--base-height) * 100%);
+  --padding-top: calc(1814 / var(--base-width) * 100%);
+  --width: calc(306 / var(--base-width) * 100% + var(--padding-left));
+  z-index: 4;
+}
+.main .section3 {
+  --padding-left: calc(790 / var(--base-height) * 100%);
+  --padding-top: calc(2888 / var(--base-width) * 100%);
+  --width: calc(407 / var(--base-width) * 100% + var(--padding-left));
+  z-index: 3;
+}
+.main .section4 {
+  --padding-left: calc(500 / var(--base-height) * 100%);
+  --padding-top: calc(4832 / var(--base-width) * 100%);
+  --width: calc(407 / var(--base-width) * 100% + var(--padding-left));
+  z-index: 2;
+}
+
+.main .download-assets {
+  --padding-left: calc(300 / var(--base-height) * 100%);
+  --padding-top: calc(6000 / var(--base-width) * 100%);
+  --width: calc(1000 / var(--base-width) * 100% + var(--padding-left));
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.main .download-assets {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+}
+
+.main .download-assets .btn {
+  padding: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+  flex:1;
+  margin: 0px 10px;
+  background-color: rgba(0,0,0,0.6);
+}
+.main .download-assets .btn:hover {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #212529;
+}
+
+.fade-anim{
+    animation: anim-fade-in 5s forwards;
+}
+
+.full-opacity{
+    opacity: 1;
+}
+
+@keyframes anim-fade-in {
+    0% {
+        opacity: 0;
+
+    }
+    25% {
+
+    }
+    50% {
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main {
+    background-position-y: 90px;
+    padding-bottom: 600px;
+  }
+  .main .section1 {
+    --padding-top: 150px;
+    --width: 90%;
+    --padding-left: 10%;
+  }
+  .main .section1 p {
+    font-size: 16px;
+  }
+  .main .arrow-down {
+    --padding-left: 48vw;
+    --padding-top: 90vh;
+    --width: calc(100 / var(--base-width) * 100% + var(--padding-left));
+  }
+  .main .section2 {
+    --padding-top: calc(2200 / var(--base-width) * 100%);
+    --padding-left: calc(180 / var(--base-height) * 100%);
+    --width: calc(350 / var(--base-width) * 100% + var(--padding-left));
+  }
+  .main .section3 {
+    --padding-top: calc(3050 / var(--base-width) * 100%);
+    --width: calc(430 / var(--base-width) * 100% + var(--padding-left));
+  }
+  .main .section4 {
+    --padding-left: calc(420 / var(--base-height) * 100%);
+    --padding-top: calc(5300 / var(--base-width) * 100%);
+    --width: calc(500 / var(--base-width) * 100% + var(--padding-left));
+  }
+  .main .download-assets {
+    --padding-left: 0px;
+    --padding-right: 0px;
+    --padding-top: 1500px;
+    --width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .main .download-assets .btn {
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px 20px;
+  }
+
+
+
+}
