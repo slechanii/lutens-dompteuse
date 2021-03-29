@@ -11,12 +11,13 @@ import {ReduxAppState} from 'src/store';
 import Button from 'react-bootstrap/Button';
 import validcode from '../../utils/logincode';
 import {ScrollTrigger, gsap} from 'gsap/all';
-
-gsap.registerPlugin(ScrollTrigger);
-
 import arrowDown from 'src/assets/img/Arrow_down.png';
 import arrowDown2x from 'src/assets/img/Arrow_down@2x.png';
 import './Main.css';
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 type StateProps = {
   hasCompletedXp: boolean;
